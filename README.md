@@ -5,9 +5,9 @@ Webpack Free texture packer plugin \
 Based on https://github.com/odrick/free-tex-packer
 
 # Install
-   
+
 $ npm install webpack-free-tex-packer
-   
+
 # Basic usage
 
 **webpack.config.js**
@@ -32,7 +32,7 @@ module.exports = {
 **Output:**
 
 http://localhost:8080/pack-result.png \
-http://localhost:8080/pack-result.json 
+http://localhost:8080/pack-result.json
 
 # Advanced usage
 
@@ -62,7 +62,8 @@ let packOptions = {
     allowTrim: true,
     exporter: "Pixi",
     removeFileExtension: false,
-    prependFolderName: true
+    prependFolderName: true,
+    writeToFile: true,
 };
 
 module.exports = {
@@ -81,7 +82,7 @@ module.exports = {
 **Output:**
 
 http://localhost:8080/assets/atlas.png \
-http://localhost:8080/assets/atlas.json 
+http://localhost:8080/assets/atlas.json
 
 ---
 
