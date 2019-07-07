@@ -176,6 +176,12 @@ class WebpackFreeTexPacker {
                         }
                     };
                 })(item, this.dest);
+
+                if (this.options.writeToDisk) {
+                    const writeStream = fs.createWriteStream(this.dest + '/' + item.name);
+                    writeStream.write(item.buffer);
+                    writeStream.end();
+                }
             }
             callback();
         });
